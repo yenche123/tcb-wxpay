@@ -37,7 +37,7 @@ exports.main = async (event, context) => {
 
   let unifiedOrderRes = {
     appId: APPID,
-    timeStamp: "" + timeStamp,
+    timeStamp: "" + timeStamp, //String类型
     nonceStr,
     package,
     signType: "RSA",
@@ -58,7 +58,7 @@ function getNonce(len = 32) {
 
 function getTradeNo() {
   let now = Date.now()
-  return String(now) + "_" + getNonce(6)
+  return String(now) + "_" + getNonce(3)
 }
 
 async function unifiedOrder({appid, openid, description, outTradeNo, fee} = {}) {
@@ -113,6 +113,5 @@ function getRequestAuthorization({method = "POST", body, path} = {}) {
   const PRIVATE_KEY = fs.readFileSync("./certKey/apiclient_key.pem").toString()
   let signature = crypto.createSign("sha256WithRSAEncryption").update(message).sign(PRIVATE_KEY, 'base64')
   let reqAuth = 'WECHATPAY2-SHA256-RSA2048 mchid="' + MCH_ID + '",nonce_str="' + nonce + '",signature="' + signature + '",timestamp="' + timeStamp + '",serial_no="' + SERIAL_NO + '"'
-  console.log("看一下 reqAuth: ", reqAuth)
   return reqAuth
 }
