@@ -1,0 +1,31 @@
+{
+  "name": "requestOrder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "keywords": [
+    "微信支付",
+    "Tenpay",
+    "Tencent-pay",
+    "腾讯云开发",
+    "腾讯云函数",
+    "Cloudbase",
+    "Serverless",
+    "wechat",
+    "wechat-pay",
+    "wechat-payment",
+    "wechatpay apiv3"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "urllib": "^2.36.1",
+    "wx-server-sdk": "~2.3.3"
+  }
+}
