@@ -17,8 +17,6 @@ cloudbase function + tenpay
 <img src="./doc/img2.jpg" width="256" />
 
 
-------
-
 <br />
 
 ## 前置工作
@@ -29,8 +27,6 @@ cloudbase function + tenpay
 
 3. 依照微信支付`接入前准备`操作 https://pay.weixin.qq.com/wiki/doc/apiv3/open/pay/chapter2_8_1.shtml
 
-
-------
 
 <br />
 
@@ -67,7 +63,6 @@ cloudbase function + tenpay
 npm install
 ```
 
-------
 
 <br />
 
@@ -98,7 +93,6 @@ wx.cloud.callFunction({
 
 ```
 
-------
 
 <br />
 
